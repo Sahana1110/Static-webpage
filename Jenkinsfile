@@ -2,19 +2,13 @@ pipeline {
   agent any
 
   environment {
-    AWS_DEFAULT_REGION = 'ap-south-1'  // Use your region
-    BUCKET_NAME = 'my-static-webpage111'  // Your S3 bucket name
+    AWS_DEFAULT_REGION = 'ap-south-1'
+    BUCKET_NAME = 'my-static-webpage111'
     AWS_ACCESS_KEY_ID = credentials('aws-access-key')
     AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
   }
 
   stages {
-    stage('Clone Website Repo') {
-      steps {
-        git 'https://github.com/Sahana1110/Static-webpage.git'
-      }
-    }
-
     stage('Deploy to S3') {
       steps {
         sh '''
