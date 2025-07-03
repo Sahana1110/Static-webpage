@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Clone Website Repo') {
       steps {
-        git 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+        git 'https://github.com/Sahana1110/Static-webpage.git'
       }
     }
 
